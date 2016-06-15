@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alumnos>
+
+	<alumno>
+		<nombre>Carlos</nombre>
+		<apellidos>Suarez</apellidos>
+		<curso>3</curso>
+		<carrera  modo="executive">Informatica</carrera>
+	</alumno>
+	<alumno>
+		<nombre>Sara</nombre>
+		<apellidos>Izquierdo</apellidos>
+		<curso>4</curso>
+		<carrera modo="ordinaria">Informatica</carrera>
+	</alumno>
+	<alumno>
+		<nombre>Miguel</nombre>
+		<apellidos>Vela</apellidos>
+		<curso>2</curso>
+		<carrera modo="executive">Fisioterapia</carrera>
+	</alumno>
+	<alumno>
+		<nombre>Juan Manuel</nombre>
+		<apellidos>Gomez</apellidos>
+		<curso>4</curso>
+		<carrera modo="ordinaria">Fisioterapia</carrera>
+	</alumno>
+	<alumno>
+		<nombre>Alejandro</nombre>
+		<apellidos>Quintana</apellidos>
+		<curso>1</curso>
+		<carrera modo="ordinaria">Enfermeria</carrera>
+	</alumno>
+	<alumno>
+		<nombre>Pablo</nombre>
+		<apellidos>Gomez</apellidos>
+		<curso>5</curso>
+		<carrera modo="ordinaria">Derecho</carrera>
+	</alumno>
+
+</alumnos>

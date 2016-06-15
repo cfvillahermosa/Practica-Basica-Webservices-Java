@@ -1,0 +1,6 @@
+eclipse.preferences.version=1
+encoding//src/es/ufv/dis/discos/bean/Disco.java=UTF-8
+encoding//src/es/ufv/dis/discos/ws/MotorWS.java=UTF-8
+encoding//src/es/ufv/dis/discos/ws/MotorWSService.java=UTF-8
+encoding//src/es/ufv/dis/discos/ws/MotorWSServiceLocator.java=UTF-8
+encoding//src/es/ufv/dis/discos/ws/MotorWSSoapBindingStub.java=UTF-8

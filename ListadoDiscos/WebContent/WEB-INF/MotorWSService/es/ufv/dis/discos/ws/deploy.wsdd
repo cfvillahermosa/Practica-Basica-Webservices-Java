@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?><!-- Use this file to deploy some handlers/chains and services      --><!-- Two ways to do this:                                           --><!--   java org.apache.axis.client.AdminClient deploy.wsdd          --><!--      after the axis server is running                          --><!-- or                                                             --><!--   java org.apache.axis.utils.Admin client|server deploy.wsdd   --><!--      from the same directory that the Axis engine runs         --><deployment xmlns="http://xml.apache.org/axis/wsdd/" xmlns:java="http://xml.apache.org/axis/wsdd/providers/java">
+
+  <!-- Services from MotorWSService WSDL service -->
+
+  <service name="MotorWS" provider="java:RPC" style="wrapped" use="literal">
+      <parameter name="wsdlTargetNamespace" value="http://ws.discos.dis.ufv.es"/>
+      <parameter name="wsdlServiceElement" value="MotorWSService"/>
+      <parameter name="schemaQualified" value="http://bean.discos.dis.ufv.es,http://ws.discos.dis.ufv.es"/>
+      <parameter name="wsdlServicePort" value="MotorWS"/>
+      <parameter name="className" value="es.ufv.dis.discos.ws.MotorWS"/>
+      <parameter name="wsdlPortType" value="MotorWS"/>
+      <parameter name="typeMappingVersion" value="1.2"/>
+      <operation xmlns:operNS="http://ws.discos.dis.ufv.es" xmlns:retNS="http://ws.discos.dis.ufv.es" xmlns:rtns="http://bean.discos.dis.ufv.es" name="getDiscos" qname="operNS:getDiscos" returnQName="retNS:getDiscosReturn" returnType="rtns:Disco" soapAction="">
+        <parameter xmlns:pns="http://ws.discos.dis.ufv.es" xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="pns:titulo" type="tns:string"/>
+      </operation>
+      <operation xmlns:operNS="http://ws.discos.dis.ufv.es" name="insertar" qname="operNS:insertar" soapAction="">
+        <parameter xmlns:pns="http://ws.discos.dis.ufv.es" xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="pns:id" type="tns:string"/>
+        <parameter xmlns:pns="http://ws.discos.dis.ufv.es" xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="pns:titulo" type="tns:string"/>
+        <parameter xmlns:pns="http://ws.discos.dis.ufv.es" xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="pns:artista" type="tns:string"/>
+        <parameter xmlns:pns="http://ws.discos.dis.ufv.es" xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="pns:genero" type="tns:string"/>
+      </operation>
+      <operation xmlns:operNS="http://ws.discos.dis.ufv.es" name="modificar" qname="operNS:modificar" soapAction="">
+        <parameter xmlns:pns="http://ws.discos.dis.ufv.es" xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="pns:id" type="tns:string"/>
+        <parameter xmlns:pns="http://ws.discos.dis.ufv.es" xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="pns:titulo" type="tns:string"/>
+        <parameter xmlns:pns="http://ws.discos.dis.ufv.es" xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="pns:soporte" type="tns:string"/>
+        <parameter xmlns:pns="http://ws.discos.dis.ufv.es" xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="pns:artista" type="tns:string"/>
+        <parameter xmlns:pns="http://ws.discos.dis.ufv.es" xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="pns:genero" type="tns:string"/>
+      </operation>
+      <operation xmlns:operNS="http://ws.discos.dis.ufv.es" name="eliminar" qname="operNS:eliminar" soapAction="">
+        <parameter xmlns:pns="http://ws.discos.dis.ufv.es" xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="pns:soporte" type="tns:string"/>
+      </operation>
+      <operation xmlns:operNS="http://ws.discos.dis.ufv.es" name="guardar" qname="operNS:guardar" soapAction="">
+      </operation>
+      <parameter name="allowedMethods" value="insertar guardar eliminar getDiscos modificar"/>
+
+      <typeMapping xmlns:ns="http://bean.discos.dis.ufv.es" qname="ns:Disco" type="java:es.ufv.dis.discos.bean.Disco" serializer="org.apache.axis.encoding.ser.BeanSerializerFactory" deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory" encodingStyle=""/>
+  </service>
+</deployment>

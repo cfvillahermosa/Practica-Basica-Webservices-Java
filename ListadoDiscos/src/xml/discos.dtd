@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!ELEMENT discos ( (disco, ag?)+ ) >
+<!ELEMENT disco (id , titulo , artista , genero) >
+<!ATTLIST disco soporte CDATA #IMPLIED >
+<!ELEMENT id (#PCDATA) >
+<!ELEMENT titulo (#PCDATA) >
+<!ELEMENT artista (#PCDATA) >
+<!ELEMENT genero (#PCDATA) >
+<!ELEMENT ag EMPTY >
+
+
+

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<discos>
+	<disco soporte="1">
+		<id>1</id>
+		<titulo>titulo1</titulo>
+		<artista>artista1</artista>
+		<genero>genero1</genero>
+	</disco>
+	<disco soporte="2">
+		<id>2</id>
+		<titulo>titulo2</titulo>
+		<artista>artista2</artista>
+		<genero>genero2</genero>
+	</disco>
+	<disco soporte="3">
+		<id>3</id>
+		<titulo>titulo3</titulo>
+		<artista>artista3</artista>
+		<genero>genero3</genero>
+	</disco>
+	<disco soporte="4">
+		<id>4</id>
+		<titulo>titulo4</titulo>
+		<artista>artista4</artista>
+		<genero>genero4</genero>
+	</disco>
+</discos>

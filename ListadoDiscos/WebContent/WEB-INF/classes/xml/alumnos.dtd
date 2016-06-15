@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<!ELEMENT alumnos ( (alumno, ag?)+ ) >
+<!ELEMENT alumno (nombre , apellidos , curso , carrera) >
+<!ELEMENT nombre (#PCDATA) >
+<!ELEMENT apellidos (#PCDATA) >
+<!ELEMENT curso (#PCDATA) >
+<!ELEMENT carrera (#PCDATA) >
+<!ATTLIST carrera modo CDATA #IMPLIED >
+<!ELEMENT ag EMPTY >
+
+
+
